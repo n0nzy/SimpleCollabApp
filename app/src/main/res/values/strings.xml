@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Simple Collaboration App</string>
+    <string name="title_activity_input_page">Input Section</string>
+</resources>
