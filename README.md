@@ -3,6 +3,10 @@ This is a simple mobile app project to test collaboration with team members
 
 For this collaboration, we are using the forking workflow, with a slight modification: the main branch we will be collaborating on is the **develop** branch, not the **master** branch.
 
+If you are a **Windows** user, kindly enter the following command first.    
+git config --global core.autocrlf true  
+Linux and Mac users do not have to do this.
+
 ### Contribution Guide
 Step 1: Kindly fork this repo.
 
