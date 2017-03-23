@@ -47,7 +47,7 @@ We should stick with the industry standard convention for naming remotes, so we 
 
  Type the following:  
  git checkout (some-feature)  // Ensures you are in the some-feature branch  
- git pull upstream  // Fetch from official repo and merge into current branch
+ git pull upstream develop  // Fetch from official repo and merge into current branch
 
  Step 6: Publish your feature.  
  Once you are ready to integrate your feature, you need to do two things.
