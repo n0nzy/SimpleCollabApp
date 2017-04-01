@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent InputIntent = new Intent(this, InputPageActivity.class);
                 startActivity(InputIntent);
                 break;
+            case R.id.button_main_location:
+                Intent LocationIntent = new Intent(this,LocationService.class);
+                startActivity(LocationIntent);
+                break;
         }
     }
 
