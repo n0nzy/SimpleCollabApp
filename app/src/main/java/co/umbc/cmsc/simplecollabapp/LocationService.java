@@ -15,10 +15,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class LocationService extends AppCompatActivity implements LocationListener {
+public class LocationService extends AppCompatActivity implements LocationListener,View.OnClickListener {
     LocationManager locationManager;
     EditText lat, longitude;
     float latitude_, longitude_;
@@ -74,13 +75,23 @@ public class LocationService extends AppCompatActivity implements LocationListen
         locationManager = (LocationManager)getSystemService(LOCATION_SERVICE);
     }
 
-    public class LocationWork implements View.OnClickListener{
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.button:
+                lat.setText(String.valueOf(latitude_));
+                longitude.setText(String.valueOf(longitude_));
+                break;
+        }
+    }
 
-       /* @Override
+   /* public class LocationWork implements OnClickListener{
+
+       *//* @Override
         public void run() {
             lat.setText(String.valueOf(latitude_));
             longitude.setText(String.valueOf(longitude_));
-        }*/
+        }*//*
 
         @Override
         public void onClick(View view) {
@@ -91,7 +102,7 @@ public class LocationService extends AppCompatActivity implements LocationListen
                     break;
             }
         }
-    }
+    }*/
 
 
     @Override
@@ -99,7 +110,7 @@ public class LocationService extends AppCompatActivity implements LocationListen
         latitude_ = (float)location.getLatitude();
         longitude_= (float)location.getLongitude();
 
-
+        onClick(lat);
     }
 
 
