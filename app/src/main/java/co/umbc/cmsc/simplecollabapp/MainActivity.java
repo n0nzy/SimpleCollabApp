@@ -22,9 +22,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent InputIntent = new Intent(this, InputPageActivity.class);
                 startActivity(InputIntent);
                 break;
-            case R.id.button_main_sensors:
+	    case R.id.button_main_sensors:
                 Intent SensorIntent = new Intent(this, SensorPageActivity.class);
                 startActivity(SensorIntent);
+                break;
+            case R.id.button_main_location:
+                Intent LocationIntent = new Intent(this,LocationService.class);
+                startActivity(LocationIntent);
                 break;
         }
     }
