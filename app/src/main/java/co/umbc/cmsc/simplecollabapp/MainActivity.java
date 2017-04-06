@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent LocationIntent = new Intent(this,LocationService.class);
                 startActivity(LocationIntent);
                 break;
+            case R.id.button_main_storage:
+                Intent StorageIntent=new Intent(this,StorageService.class);
+                startActivity(StorageIntent);
+                break;
         }
     }
 
